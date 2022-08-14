@@ -49,6 +49,7 @@ enviar.addEventListener('click', e => {
 
     if(validacaoFinal){
         queryOne('form').style.opacity = '0'
+        queryOne('form').style.marginLeft = '-10%'
         setTimeout(()=>{
             queryOne('form').style.display = 'none'
             queryOne('.contem--menssagem--sucesso').style.display = 'block'
