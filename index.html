@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <section class="corpo">
+    <section class="background">
+      <div class="card--img">
+        <div class="card">
+          <div class="logo">
+            <div class="bola"></div>
+            <div class="bola"></div>
+          </div>
+          <div class="numero" id="1">0000 0000 0000 0000</div>
+          <div class="contem--nome-expedicao">
+            <div class="nome" id="0">Jane Appleseed</div>
+            <div class="expedicao">
+              <span id="2">00</span>
+              <span>/</span>
+              <span id="3">00</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="cvc" id="4">000</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="separador"></section>
+
+    <section class="conteudo">
+      <form>
+        <label>cardholder name</label>
+        <input type="text" name="nome" id="nome" placeholder="e.g. Jane Appleseed">
+        <p></p>
+        <label>card number</label>
+        <input type="text" name="numero" id="numero--cartao" data-ls-module="charCounter" maxlength="19" placeholder="e.g. 0000 0000 0000 0000">
+        <p></p>
+
+        <div class="dados--cartao">
+          <div class="data">
+            <label>exp.date (mm/yy)</label>
+            <div class="alinhar">
+              <div class="mes">
+                <input type="text" name="mes" id="mes" data-ls-module="charCounter" maxlength="2" placeholder="00">
+                <p></p>
+              </div>
+              <div class="ano">
+                <input type="text" name="ano" id="ano" data-ls-module="charCounter" maxlength="2" placeholder="00">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="codigo--cartao">
+            <label>cvc</label>
+            <input type="text" name="cvc" id="cvc" data-ls-module="charCounter" maxlength="3" placeholder="e.g. 000">
+            <p></p>
+          </div>
+        </div>
+      
+        <input type="submit" value="Confirm" id="confirm">
+      </form>
+
+      <div class="contem--menssagem--sucesso">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="url(#a)"/>
+          <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/>
+          <defs>
+            <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6348FE"/>
+              <stop offset="1" stop-color="#610595"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="menssagem--sucesso">
+          <h1>thank you!</h1>
+          <p>We've added your card details</p>
+
+          <div class="button--continuar">
+            <p>Continue</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by <a target="_blank" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a target="_blank" href="https://github.com/CodePaulo">Paulo Sérgio</a>.
+      </div>
+    </section>
+
+  </section>
+</body>
+</html>
