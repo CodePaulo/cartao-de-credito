@@ -19,7 +19,7 @@
     position: relative;
     flex: 1;
     height: 100%;
-    background-image: url(images/bg-main-desktop.png);
+    background-image: url('bg-main-desktop.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,14 +40,14 @@
 }
 
 .card--img .card:nth-of-type(1){
-    background-image: url('images/bg-card-front.png');
+    background-image: url('bg-card-front.png');
 }
 
 .card--img .card:nth-of-type(2){
     margin-top: 15px;
     position: relative;
     left: 20%;
-    background-image: url('images/bg-card-back.png');
+    background-image: url('bg-card-back.png');
 }
 
 .card .logo{
