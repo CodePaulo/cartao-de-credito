@@ -84,12 +84,14 @@ function escreverTextoPadrao(item){
 }
 
 function formatarNumeroDoCartao(e, item){
+    const parametro = item.value.replace(/ /g, '')
+    
     if(e.key == 'Backspace'){
         if(item.value.length % 5 === 0){
             item.value = item.value.substring(0, item.value.length - 1)
         }
     }else{
-        if(item.value.length == 4 || item.value.length == 9 || item.value.length == 14){
+        if(parametro.length < 16 || parametro.length % 4 === 0){
             item.value = item.value+' '
         }
     }
