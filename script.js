@@ -91,7 +91,7 @@ function formatarNumeroDoCartao(e, item){
             item.value = item.value.substring(0, item.value.length - 1)
         }
     }else{
-        if(parametro.length < 16 || parametro.length % 4 === 0){
+        if(parametro.length < 16 && parametro.length % 4 === 0){
             item.value = item.value+' '
         }
     }
