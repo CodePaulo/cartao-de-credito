@@ -85,7 +85,7 @@ function escreverTextoPadrao(item){
 
 function formatarNumeroDoCartao(e, item){
     if(e.key == 'Backspace'){
-        if(item.value.length == 5 || item.value.length == 10 || item.value.length == 15){
+        if(item.value.length % 5 === 0){
             item.value = item.value.substring(0, item.value.length - 1)
         }
     }else{
