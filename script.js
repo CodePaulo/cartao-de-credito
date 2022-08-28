@@ -100,28 +100,25 @@ function formatarNumeroDoCartao(e, item){
 function textoDeIrregularidade(item, texto){
     if(item.name == 'nome'){
         queryOne('form p:nth-of-type(1)').innerHTML = texto
-        item.style.borderColor = 'red'
     }
 
     if(item.name == 'numero'){
         queryOne('form p:nth-of-type(2)').innerHTML = texto
-        item.style.borderColor = 'red'
     }
 
     if(item.name == 'mes'){
         queryOne('.alinhar .mes p').innerHTML = texto
-        item.style.borderColor = 'red'
     }
 
     if(item.name == 'ano'){
         queryOne('.alinhar .ano p').innerHTML = texto
-        item.style.borderColor = 'red'
     }
 
     if(item.name == 'cvc'){
         queryOne('.codigo--cartao p').innerHTML = texto
-        item.style.borderColor = 'red'
     }
+    
+    item.style.borderColor = 'red'
 }
 
 function validar(item){
